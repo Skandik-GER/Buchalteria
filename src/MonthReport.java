@@ -5,6 +5,9 @@ public class MonthReport {
 
 
     void printReports() {
+        // Yellow
+        // Неудачное название для переменной итерирования по транзакциям
+        // Это же одна транзакция, соотвественно, можно просто Transaction transaction : ...
         for (Transaction transactions1: transactions ){
             transactions1.print();
         }

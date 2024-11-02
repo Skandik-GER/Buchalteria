@@ -1,8 +1,14 @@
+// RED
+// Лишние комментарии необходимо удалить
+
 //TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 import java.util.Scanner;
 import java.util.HashMap;
 import java.util.ArrayList;
+// RED
+// Неиспользуемые импорты необходимо удалить
+
 public class Main {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
@@ -22,8 +28,12 @@ public class Main {
                     System.out.println("You don't read files");
                 }
             } else if (command == 4) {
+                // RED
+                // Пользователь может вызвать 4 команду до того, как отчеты считаны
                 reportsManager.printMonthReports();
             } else if (command == 5){
+                // RED
+                // Пользователь может вызвать 5 команду до того, как отчеты считаны
                 reportsManager.printYearReport();
             } else if (command == 6){
                 break;

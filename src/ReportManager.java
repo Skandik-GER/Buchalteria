@@ -24,6 +24,9 @@ public class ReportManager {
     }
 
     void printMonthReports(){
+        // Yellow
+        // Код жестко ограничен на эти три месяца,
+        // что нехорошо может сказаться при масштабировании проекта
         int month = 1;
         for (MonthReport report : monthReports) {
             if (month == 1) {
@@ -60,12 +63,19 @@ public class ReportManager {
             if(monthReports[i].sumMonth(false) != yearlyReport.sumYear(i + 1,false)){
                 monthNumber = i;
             }
+            // RED
+            // Некорректно происходит проверка данных после первого месяца
+            // Получается, что если в первом все ок, то мы сразу печатаем успех и прерываем цикл
+            // Остальные месяцы просто не проверяются
             if(monthNumber == -1){
                 System.out.println("Check is successful");
                 break;
             }else{
                 System.out.println("Check failed " + "Month: " + (monthNumber + 1));
             }
+            // RED
+            // Мы до этого условия никогда не сможем дойти,
+            // тк сверху при monthNumber == -1 делаем break
             if(monthNumber == -1){
                 System.out.println("Check is successful");
             }

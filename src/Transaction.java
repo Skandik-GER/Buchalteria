@@ -4,7 +4,11 @@ public class Transaction {
     int quantity;
     double unitPrice;
 
-
+    // Green
+    // Очень здорово реализован класс под хранилище транзакций:
+    // -имеются все необходимые поля
+    // -имеется удобный конструктор для создания обёектов
+    // -реализован метод для красивой печати данных транзакции
     Transaction(String name,boolean isExpense, int quantity,double unitPrice){
         this.name = name;
         this.isExpense = isExpense;
