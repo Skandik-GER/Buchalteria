@@ -67,19 +67,14 @@ public class ReportManager {
             // Некорректно происходит проверка данных после первого месяца
             // Получается, что если в первом все ок, то мы сразу печатаем успех и прерываем цикл
             // Остальные месяцы просто не проверяются
-            if(monthNumber == -1){
-                System.out.println("Check is successful");
-                break;
-            }else{
-                System.out.println("Check failed " + "Month: " + (monthNumber + 1));
-            }
             // RED
             // Мы до этого условия никогда не сможем дойти,
             // тк сверху при monthNumber == -1 делаем break
             if(monthNumber == -1){
-                System.out.println("Check is successful");
+                System.out.println("Check is successful " + "Month: " + (monthNumber + 2));
+            }else{
+                System.out.println("Check failed " + "Month: " + (monthNumber + 1));
             }
-
         }
 
     }
@@ -123,5 +118,6 @@ public class ReportManager {
         }
         return true;
     }
+
 }
 

@@ -1,12 +1,7 @@
-// RED
+// RED+
 // Лишние комментарии необходимо удалить
-
-//TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
-// click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 import java.util.Scanner;
-import java.util.HashMap;
-import java.util.ArrayList;
-// RED
+// RED+
 // Неиспользуемые импорты необходимо удалить
 
 public class Main {
@@ -19,22 +14,32 @@ public class Main {
             int command = scanner.nextInt();
             if (command == 1){
                 reportsManager.readAllReportsMonth();
+                System.out.println("Files was read");
             }else if (command == 2){
                 reportsManager.readAllReportsYear();
+                System.out.println("Files was read");
             } else if (command == 3) {
                 if(reportsManager.checkMonth(command) && reportsManager.checkYear(command)){
                     reportsManager.sums();
                 }else{
-                    System.out.println("You don't read files");
+                    System.out.println("You don't read files,old ass");
                 }
             } else if (command == 4) {
-                // RED
+                // RED+1
                 // Пользователь может вызвать 4 команду до того, как отчеты считаны
-                reportsManager.printMonthReports();
+                if(reportsManager.checkMonth(command)){
+                    reportsManager.printMonthReports();
+                }else{
+                    System.out.println("You don't read files,dumb ass");
+                }
             } else if (command == 5){
-                // RED
+                // RED+
                 // Пользователь может вызвать 5 команду до того, как отчеты считаны
-                reportsManager.printYearReport();
+                if(reportsManager.checkYear(command)){
+                    reportsManager.printYearReport();
+                }else{
+                    System.out.println("You don't read files,dumb ass");
+                }
             } else if (command == 6){
                 break;
             }
@@ -46,7 +51,7 @@ public class Main {
         System.out.println("3 - Сверить отчеты");
         System.out.println("4 - Вывести информацию обо всех месячных отчетах");
         System.out.println("5 - Вывести информацию о новогоднем отчете");
-        System.out.println("6 - Adios");
+        System.out.println("6 - Ciao,Adios,Poka,Bye,Exit");
 
     }
 

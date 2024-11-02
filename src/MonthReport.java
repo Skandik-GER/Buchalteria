@@ -5,11 +5,11 @@ public class MonthReport {
 
 
     void printReports() {
-        // Yellow
+        // Yellow+
         // Неудачное название для переменной итерирования по транзакциям
         // Это же одна транзакция, соотвественно, можно просто Transaction transaction : ...
-        for (Transaction transactions1: transactions ){
-            transactions1.print();
+        for (Transaction transactions: transactions ){
+            transactions.print();
         }
     }
     double sumMonth(boolean isExpense){
